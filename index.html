@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>t-store</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+
+    <!-- Additional CSS Files -->
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+      <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 py-lg-0 mt-4">
+        <a href="index.html" class="navbar-brand p-0">
+          <h1 class="m-0">
+            <i class="fa fa-shopping-cart me-2 text-muted"></i>
+            <span class="text-primary"> T-Shirt</span> Sudio
+          </h1>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link active mx-lg-4"
+              >Home</a
+            >
+            <a href="index.html" class="nav-item nav-link mx-lg-4">Shop</a>
+
+            <a href="#" class="nav-item nav-link mx-lg-4">About us</a>
+
+            <a href="contact.html" class="nav-item nav-link mx-lg-4">Contact</a>
+          </div>
+
+          <form class="d-flex mx-lg-4" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content w-100" id="img01" />
+
+      <!-- Modal Caption (Image Text) -->
+      <div class="text-center text-light mb-3 mt-2 b-3" id="caption"></div>
+      <div class="d-flex justify-content-center align-items-center">
+        <ul class="stars d-flex">
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+          <li id="star" class="rstar text-warning">(16)</li>
+        </ul>
+      </div>
+      <div class="text-center text-light mb-3 mt-2 b-3" id="description"></div>
+      <div class="text-center text-light" id="price"></div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="">
+          <main>
+            <div class="cart-modal-overlay">
+              <div class="cart-modal">
+                <i id="close-btn" class="fa fa-times"></i>
+                <h1 class="cart-is-empty">Cart is empty</h1>
+
+                <div class="product-rows"></div>
+                <div class="total">
+                  <h1 class="cart-total">TOTAL</h1>
+                  <span class="total-price">$0</span>
+                  <button class="purchase-btn">PURCHASE</button>
+                </div>
+              </div>
+            </div>
+
+            <!--   end of cart modal -->
+            <div class="cart-btn">
+              <i id="cart" class="fa fa-shopping-cart"></i>
+              <span class="cart-quantity">0</span>
+            </div>
+            <!--  products  -->
+            <div class="container mt-2">
+              <div class="row">
+                <div class="col-lg-10 col-7">
+                  <h2 class="">Latest Products</h2>
+                </div>
+                <div class="col-lg-2 col-6 allign-right">
+                  <a href="#"
+                    >view all products <i class="fa fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="items-container">
+              <div class="card-1 card">
+                <img class="product-image" src="./img/img-1.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">SEA green t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(16)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$95</span>
+              </div>
+              <div class="card-2 card">
+                <img class="product-image" src="./img/img-2.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">ciyan colorless t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(15)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$75</span>
+              </div>
+              <div class="card-3 card">
+                <img class="product-image" src="./img/img-3.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">Zebra Striped t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(36)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$15</span>
+              </div>
+              <div class="card-4 card">
+                <img class="product-image" src="img/product-06.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">offline print t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(46)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$35</span>
+              </div>
+              <div class="card-5 card">
+                <img class="product-image" src="img/product-08.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">codeprint t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(116)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$45</span>
+              </div>
+            </div>
+            <div class="items-container">
+              <div class="card-1 card">
+                <img class="product-image" src="./img/img-1.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">SEA green t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li class="rstar">(16)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$95</span>
+              </div>
+              <div class="card-2 card">
+                <img class="product-image" src="./img/img-2.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">ciyan colorless t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(15)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$75</span>
+              </div>
+              <div class="card-3 card">
+                <img class="product-image" src="./img/img-3.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">Zebra Striped t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(36)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$15</span>
+              </div>
+              <div class="card-4 card">
+                <img class="product-image" src="img/product-06.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">offline print t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(46)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$35</span>
+              </div>
+              <div class="card-5 card">
+                <img class="product-image" src="img/product-08.webp" alt="" />
+                <button class="add-to-cart">Add to cart</button>
+                <div class="details align-center">
+                  <a href="#"
+                    ><h5 class="text-dark mt-2">codeprint t-shirt</h5></a
+                  >
+                  <ul class="stars d-flex ms-lg-5 ms-2">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li>(116)</li>
+                  </ul>
+                </div>
+                <span class="product-price">$45</span>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!-- footer start  -->
+    <div class="fluid-container">
+      <footer
+        class="text-center text-white"
+        style="background-color: #010101c8"
+      >
+        <div class="container">
+          <section>
+            <div class="row text-center d-flex justify-content-center pt-5">
+              <div class="col-md-2 mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a class="btn btn-light" href="#!" class="text-white">Home</a>
+                </h6>
+              </div>
+              <div class="col-md-2 mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a class="btn btn-light" href="#!" class="text-white">Shop</a>
+                </h6>
+              </div>
+              <div class="col-md-2 mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a class="btn btn-light" href="#!" class="text-white"
+                    >About us</a
+                  >
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+
+              <div class="col-md-2 mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a class="btn btn-light" href="#!" class="text-white"
+                    >Contact</a
+                  >
+                </h6>
+              </div>
+              <div class="col-md-2 mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a class="btn btn-light" href="#!" class="text-white">Help</a>
+                </h6>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Links -->
+
+          <hr class="my-5" />
+
+          <!-- Section: Text -->
+          <section class="mb-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <p class="text-light">
+                  t-shirt studio is trusted online store for buying new
+                  t-shirts. We ensure the best product delivery. But we cannot
+                  warrant full brand quality. While using this site, you agree
+                  to have read and accepted our terms of use, cookie and privacy
+                  policy. Copyright 1999-2023 by Refsnes Data. All Rights
+                  Reserved.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Social -->
+          <section class="text-center mb-5">
+            <a
+              class="btn btn-lg btn-primary btn-lg-square rounded me-4 mb-4"
+              href=""
+            >
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a
+              class="btn btn-lg btn-primary btn-lg-square rounded me-4 mb-4"
+              href=""
+            >
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a
+              class="btn btn-lg btn-primary btn-lg-square rounded me-4 mb-4"
+              href=""
+            >
+              <i class="fa fa-google"></i>
+            </a>
+            <a
+              class="btn btn-lg btn-primary btn-lg-square rounded me-4 mb-4"
+              href=""
+            >
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a
+              class="btn btn-lg btn-primary btn-lg-square rounded me-4 mb-4"
+              href=""
+            >
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a
+              class="btn btn-lg btn-primary btn-lg-square rounded me-4 mb-4"
+              href=""
+            >
+              <i class="fa fa-github"></i>
+            </a>
+          </section>
+          <!-- Section: Social -->
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2023 Copyright:
+          <a class="text-white" href="#">t-shirtstudio.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
